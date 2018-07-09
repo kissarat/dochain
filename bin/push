@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# Last modified: 18.05.09 23:51:16
+# Hash: 005bd9f9296e3ff9c1fcdb1860d634596952c770
+
+MESSAGE=$1
+if [[ -z ${MESSAGE} ]]
+then
+    MESSAGE=$(date "+%F %T")
+fi
+git pull
+python3 ${ROOT}/bin/update-hash.py
+git add -A
+git commit -m "${MESSAGE}"
+git push
