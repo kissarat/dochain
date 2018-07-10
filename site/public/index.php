@@ -1,7 +1,7 @@
 <?php
 /**
- * Last modified: 18.07.10 10:00:40
- * Hash: 7a7c0dc5c261c7bd7d3ec2294958e69ec0cba1b0
+ * Last modified: 18.07.10 10:53:24
+ * Hash: f82b6f471a699e3a992536409d485e8e3dc515bd
  */
 
 require_once '../web.php';
@@ -25,7 +25,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
         $data = request('GET', $url);
         if ($data) {
             $page->setData($data);
-            $old = $pageRepository->findBy(['hash' => $page->getHash()]);
+            $old = $pageRepository->findOneBy(['hash' => $page->getHash()]);
             if (empty($old)) {
                 $entityManager->persist($page);
             }
