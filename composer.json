@@ -1,6 +1,8 @@
 {
+  "minimum-stability": "dev",
   "require": {
-    "doctrine/orm": "2.4.*"
+    "doctrine/orm": "^2",
+    "doctrine/migrations": "^2.0@dev"
   },
   "autoload": {
     "psr-0": {"": "src/"}
