@@ -1,7 +1,7 @@
 <?php
 /**
- * Last modified: 18.07.10 04:41:27
- * Hash: a403ddad6fe1a3b9ee4c5124f639c9e7262e4583
+ * Last modified: 18.07.10 09:01:46
+ * Hash: b6465e61cb2e52fa35434f251dc14c8628eecd86
  */
 
 use Doctrine\ORM\EntityManager;
@@ -22,6 +22,10 @@ $config = Setup::createAnnotationMetadataConfiguration(array(SITE . '/src'), $is
 $conn = require 'db.php';
 
 // obtaining the entity manager
+/**
+ * @var EntityManager
+ */
+$entityManager = null;
 try {
     $entityManager = EntityManager::create($conn, $config);
 

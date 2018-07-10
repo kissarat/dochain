@@ -4,5 +4,6 @@
 .sass-cache/
 node_modules/
 npm-debug.log
+site/db.sqlite
 Thumbs.db
 vendor
